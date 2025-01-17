@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		4E3A55452D3A97A700520149 /* NotificationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E3A55442D3A97A700520149 /* NotificationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E3A55522D3A988A00520149 /* NotificationResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3A554E2D3A988A00520149 /* NotificationResponseModel.swift */; };
+		4E3A55542D3A989000520149 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3A55532D3A989000520149 /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4E3A55412D3A97A700520149 /* NotificationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NotificationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E3A55442D3A97A700520149 /* NotificationKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationKit.h; sourceTree = "<group>"; };
+		4E3A554E2D3A988A00520149 /* NotificationResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationResponseModel.swift; sourceTree = "<group>"; };
+		4E3A55532D3A989000520149 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,8 @@
 			isa = PBXGroup;
 			children = (
 				4E3A55442D3A97A700520149 /* NotificationKit.h */,
+				4E3A554E2D3A988A00520149 /* NotificationResponseModel.swift */,
+				4E3A55532D3A989000520149 /* NotificationManager.swift */,
 			);
 			path = NotificationKit;
 			sourceTree = "<group>";
@@ -93,6 +99,7 @@
 				TargetAttributes = {
 					4E3A55402D3A97A700520149 = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -129,6 +136,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E3A55522D3A988A00520149 /* NotificationResponseModel.swift in Sources */,
+				4E3A55542D3A989000520149 /* NotificationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +269,7 @@
 			buildSettings = {
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -291,6 +301,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -301,6 +312,7 @@
 			buildSettings = {
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
