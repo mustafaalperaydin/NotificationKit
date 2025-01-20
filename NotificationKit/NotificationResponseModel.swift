@@ -9,22 +9,22 @@ import Foundation
 
 public struct NotificationResponseModel : Codable, Hashable{
     
-    var Type1: Int? = -1
-    var MxRouteId: Int? = -1
-    var MxBlockId: Int? = -1
-    var BlockStatusId: Int? = -1
-    var BlockExecutionStatusId: Int? = -1
-    var BlockActionDesc: String? = ""
-    var PointStatusId: Int? = -1
-    var PointId: Int? = -1
-    var Show: Int? = -1
-    var ActionDesc: String? = ""
-    var UseSandBox: Int? = -1
-    var ExecutionType: Int? = -1
+    public var Type1: Int? = -1
+    public var MxRouteId: Int? = -1
+    public var MxBlockId: Int? = -1
+    public var BlockStatusId: Int? = -1
+    public var BlockExecutionStatusId: Int? = -1
+    public var BlockActionDesc: String? = ""
+    public var PointStatusId: Int? = -1
+    public var PointId: Int? = -1
+    public var Show: Int? = -1
+    public var ActionDesc: String? = ""
+    public var UseSandBox: Int? = -1
+    public var ExecutionType: Int? = -1
 
-    init(){ }
+    public init(){ }
     
-    init(Type1: Int?, MxRouteId: Int?, MxBlockId: Int?, BlockStatusId: Int?, BlockExecutionStatusId: Int?, BlockActionDesc: String?, PointStatusId: Int?, PointId: Int?, Show: Int?, ActionDesc: String?, UseSandBox: Int?, ExecutionType: Int?){
+    public init(Type1: Int?, MxRouteId: Int?, MxBlockId: Int?, BlockStatusId: Int?, BlockExecutionStatusId: Int?, BlockActionDesc: String?, PointStatusId: Int?, PointId: Int?, Show: Int?, ActionDesc: String?, UseSandBox: Int?, ExecutionType: Int?){
         
         self.Type1 = Type1
         self.MxRouteId = MxRouteId

@@ -14,11 +14,38 @@ public class NotificationManager {
     }
     
     public func handleResponseNotification(userInfo: [AnyHashable: Any]) -> NotificationResponseModel? {
-        // JSON verisini NotificationPayload modeline dönüştürme işlemi
-        guard let data = try? JSONSerialization.data(withJSONObject: userInfo, options: []) else {
-            return nil
+        print("✅handleResponseNotification")
+        var notfModel: NotificationResponseModel = NotificationResponseModel()
+        print("🍀userInfo - \(userInfo)")
+        for notf in userInfo {
+            print("⚠️notf - \(notf)")
+            if notf.key.description == "Type" {
+                notfModel.Type1 = Int(notf.value as! String)
+            } else if notf.key.description == "MxRouteId" {
+                notfModel.MxRouteId = Int(notf.value as! String)
+            } else if notf.key.description == "MxBlockId" {
+                notfModel.MxBlockId = Int(notf.value as! String)
+            } else if notf.key.description == "BlockStatusId" {
+                notfModel.BlockStatusId = Int(notf.value as! String)
+            } else if notf.key.description == "BlockExecutionStatusId" {
+                notfModel.BlockExecutionStatusId = Int(notf.value as! String)
+            } else if notf.key.description == "BlockActionDesc" {
+                notfModel.BlockActionDesc = notf.value as? String
+            } else if notf.key.description == "PointStatusId" {
+                notfModel.PointStatusId = Int(notf.value as! String)
+            } else if notf.key.description == "PointId" {
+                notfModel.PointId = Int(notf.value as! String)
+            } else if notf.key.description == "Show" {
+                notfModel.Show = Int(notf.value as! String)
+            } else if notf.key.description == "ActionDesc" {
+                notfModel.ActionDesc = notf.value as? String
+            } else if notf.key.description == "UseSandBox" {
+                notfModel.UseSandBox = Int(notf.value as! String)
+            } else if notf.key.description == "ExecutionType" {
+                notfModel.ExecutionType = Int(notf.value as! String)
+            }
         }
-        
-        return try? JSONDecoder().decode(NotificationResponseModel.self, from: data)
+        print("🍕notfModel - \(notfModel)")
+        return notfModel
     }
 }
